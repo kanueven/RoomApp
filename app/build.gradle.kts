@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+
 }
 
 android {
@@ -69,14 +70,15 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 
+
+
     //Room
-    implementation("androidx.room:room-runtime:2.4.3")
-    annotationProcessor("androidx.room:room-compiler:2.4.3")
+    implementation("androidx.room:room-runtime:$room_version")
 
     // To use Kotlin annotation processing tool (kapt)
-    kapt("androidx.room:room-compiler:2.4.3")
-    implementation ("androidx.room:room-ktx:2.4.3")
-    implementation ("androidx.room:room-testing:2.5.1")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation ("androidx.room:room-ktx:$room_version")
+
 
     //Coroutines
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
@@ -86,7 +88,7 @@ dependencies {
     //navigation
     implementation ("androidx.navigation:navigation-compose:2.5.3")
 }
-// Allow references to generated code
-//kapt {
-//    correctErrorTypes true
-//}
+ Allow references to generated code
+kapt {
+    correctErrorTypes true
+}

@@ -70,14 +70,12 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 
-
-
     //Room
-    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-runtime:2.5.0")
 
     // To use Kotlin annotation processing tool (kapt)
-    kapt("androidx.room:room-compiler:$room_version")
-    implementation ("androidx.room:room-ktx:$room_version")
+    kapt("androidx.room:room-compiler:2.5.0")
+    implementation ("androidx.room:room-ktx:2.5.0")
 
 
     //Coroutines
@@ -88,7 +86,7 @@ dependencies {
     //navigation
     implementation ("androidx.navigation:navigation-compose:2.5.3")
 }
- Allow references to generated code
+// Allow references to generated code
 kapt {
-    correctErrorTypes true
+    correctErrorTypes; true
 }

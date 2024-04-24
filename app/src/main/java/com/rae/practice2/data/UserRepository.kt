@@ -11,4 +11,8 @@ class UserRepository(
     suspend fun addUser(user: User){
         userDao.insert(user)
     }
+
+    suspend fun deleteUser(user: User){
+        userDao.deleteUser(user)
+    }
 }
